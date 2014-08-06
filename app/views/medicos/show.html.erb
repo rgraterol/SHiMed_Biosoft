@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cmv:</strong>
+  <%= @medico.cmv %>
+</p>
+
+<p>
+  <strong>Cv:</strong>
+  <%= @medico.cv %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @medico.url %>
+</p>
+
+<%= link_to 'Edit', edit_medico_path(@medico) %> |
+<%= link_to 'Back', medicos_path %>

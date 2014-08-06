@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails SHiMed_Biosoft: development" uuid="92f3af73-139e-4a32-bd73-10bbc38aa291">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails SHiMed_Biosoft: test" uuid="ee61b37d-6961-42ad-b07f-af1989ffe17b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails SHiMed_Biosoft: production" uuid="f25fb378-e462-4246-b0f4-c2d1a0625142">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

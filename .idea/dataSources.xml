@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="624318110">
+    <data-source source="LOCAL" name="Rails SHiMed_Biosoft: development" uuid="92f3af73-139e-4a32-bd73-10bbc38aa291">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:SHiMed_Biosoft_development</jdbc-url>
+      <user-name>shimed</user-name>
+      <user-password>dfc8dfc3dfc5dfd9dfc5dfccdfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails SHiMed_Biosoft: test" uuid="ee61b37d-6961-42ad-b07f-af1989ffe17b">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:SHiMed_Biosoft_test</jdbc-url>
+      <user-name>shimed</user-name>
+      <user-password>dfc8dfc3dfc5dfd9dfc5dfccdfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails SHiMed_Biosoft: production" uuid="f25fb378-e462-4246-b0f4-c2d1a0625142">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:SHiMed_Biosoft_production</jdbc-url>
+      <user-name>shimed</user-name>
+      <user-password>dfc8dfc3dfc5dfd9dfc5dfccdfde</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

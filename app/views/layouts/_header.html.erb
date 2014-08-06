@@ -1,0 +1,70 @@
+
+    <div id="navbar-main">
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
+            </button>
+            <a class="navbar-brand hidden-xs hidden-sm" href="http://localhost:3000/"><span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><%= link_to " Inicio", index_path, :class=>'smoothScroll' %></li>
+              <li> <a href="#about" class="smoothScroll"> Nuestra Institución</a></li>
+              <li> <a href="#services" class="smoothScroll"> Directorio</a></li>
+              <li> <a href="#team" class="smoothScroll"> Promociones</a></li>
+              <li> <a href="#portfolio" class="smoothScroll"> Actualidad</a></li>
+              <li> <a href="#blog" class="smoothScroll"> Contacto</a></li>
+              <li class='divider2'></li>
+
+              <li><!-- <form accept-charset="UTF-8" action="search_results.html" class="navbar-search" method="get" /><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+                <button class="btn btn-link icon-search" name="button" type="submit"></button>
+                <input autocomplete="off" class="search-query span2" id="q_header" name="q" placeholder="Search..." type="text" value="" />
+                </form> -->
+              </li>
+             </ul>
+            <div class="col-sm-3 col-md-3 pull-right">
+              <ul class="nav navbar-nav">
+                <% if signed_in? %>
+                    <li class='dropdown dark user-menu'>
+                      <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                        <!--<img alt='Mila Kunis' height='23' src='assets/img/avatar.jpg' width='23' />-->
+                        <span class='user-name hidden-phone'><%= @current_usuario.email %></span>
+                        <b class='caret'></b>
+                      </a>
+                      <ul class='dropdown-menu'>
+                        <li>
+                          <a href='user_profile.html'>
+                            <i class='icon-user'></i>
+                            Profile
+                          </a>
+                        </li>
+                        <li>
+                          <a href='user_profile.html'>
+                            <i class='icon-cog'></i>
+                            Settings
+                          </a>
+                        </li>
+                        <li class='divider'></li>
+                        <li>
+
+                            <i class='icon-signout'></i>
+                          <%= link_to "Sign Out", session_destroy_path, method: "delete" %>
+                        </li>
+                      </ul>
+                    </li>
+
+                <% else %>
+                    <li><%= link_to "Registro", new_usuario_path, :class=>'smoothScroll' %></li>
+                    <li><%= link_to "Iniciar Sesion", signin_path, :class=>'smoothScroll'%></li>
+                 <% end %>
+              </ul>
+            </div>
+
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
