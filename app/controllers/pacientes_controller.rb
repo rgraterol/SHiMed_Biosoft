@@ -25,6 +25,7 @@ class PacientesController < ApplicationController
   # POST /pacientes.json
   def create
     @paciente = Paciente.new(paciente_params)
+    @paciente.password_digest="xavier.graterol@gmail.com"
 
     respond_to do |format|
       if @paciente.save
@@ -69,6 +70,6 @@ class PacientesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def paciente_params
-      params[:paciente]
+      params.require(:paciente).permit(:nombre, :apellido, :cedula, :direccion, :telefono_casa, :telefono_celular, :telefono_oficina, :sexo, fecha_nacimiento_fixer(:paciente))
     end
 end

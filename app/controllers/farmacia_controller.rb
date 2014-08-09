@@ -69,6 +69,6 @@ class FarmaciaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def farmacium_params
-      params.require(:farmacium).permit(:reg_sanitario)
+      params.require(:farmacium).permit(:nombre, :rif, :direccion, :direccionFiscal, :telefono, :fax, :url, fecha_creacion_fixer(:farmacium), :reg_sanitario)
     end
 end

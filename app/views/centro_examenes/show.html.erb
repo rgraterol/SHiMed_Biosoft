@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @centro_examenes.nombre %>
+</p>
+
+<p>
+  <strong>Rif:</strong>
+  <%= @centro_examenes.rif %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @centro_examenes.direccion %>
+</p>
+
+<p>
+  <strong>Direccionfiscal:</strong>
+  <%= @centro_examenes.direccionFiscal %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @centro_examenes.telefono %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @centro_examenes.fax %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @centro_examenes.url %>
+</p>
+
+<p>
+  <strong>Fechacreacion:</strong>
+  <%= @centro_examenes.fechaCreacion %>
+</p>
+
+<%= link_to 'Edit', edit_centro_examene_path(@centro_examenes) %> |
+<%= link_to 'Back', centro_examenes_path %>

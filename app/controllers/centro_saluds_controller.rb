@@ -69,6 +69,6 @@ class CentroSaludsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def centro_salud_params
-      params.require(:centro_salud).permit(:publico)
+      params.require(:centro_salud).permit(:nombre, :rif, :direccion, :direccionFiscal, :telefono, :fax, :url, fecha_creacion_fixer(:centro_salud), :publico)
     end
 end

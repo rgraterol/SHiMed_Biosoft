@@ -69,6 +69,6 @@ class AseguradorasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def aseguradora_params
-      params.require(:aseguradora).permit(:registro_go)
+      params.require(:aseguradora).permit(:nombre, :rif, :direccion, :direccionFiscal, :telefono, :fax, :url, fecha_creacion_fixer(:aseguradora), :registro_go)
     end
 end

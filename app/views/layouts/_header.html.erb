@@ -36,20 +36,15 @@
                       </a>
                       <ul class='dropdown-menu'>
                         <li>
-                          <a href='user_profile.html'>
                             <i class='icon-user'></i>
-                            Profile
-                          </a>
+                            <%= link_to "Perfil", usuario_perfil_path %>
                         </li>
                         <li>
-                          <a href='user_profile.html'>
                             <i class='icon-cog'></i>
                             Settings
-                          </a>
                         </li>
                         <li class='divider'></li>
                         <li>
-
                             <i class='icon-signout'></i>
                           <%= link_to "Sign Out", session_destroy_path, method: "delete" %>
                         </li>

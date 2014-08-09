@@ -1,0 +1,23 @@
+<h1>Listing centro_examenes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @centros_examenes.each do |centro_examene| %>
+      <tr>
+        <td><%= link_to 'Show', centro_examene %></td>
+        <td><%= link_to 'Edit', edit_centro_examene_path(centro_examene) %></td>
+        <td><%= link_to 'Destroy', centro_examene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Centro examene', new_centro_examene_path %>
