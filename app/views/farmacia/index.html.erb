@@ -1,25 +1,26 @@
-<h1>Listing farmacia</h1>
+<h1>Directorio de Farmacias</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Reg sanitario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<table class="table table-striped table-bordered table-condensed">
   <tbody>
-    <% @farmacia.each do |farmacium| %>
+  <tr>
+    <td><b>Nombre Farmacia</b></td>
+    <td><b>RIF</b></td>
+    <td><b>Telefono</b></td>
+    <td><b>Dirección</b></td>
+    <td><b>Página Web</b></td>
+  </tr>
+  <% @farmacia.each do |farmacium| %>
       <tr>
-        <td><%= farmacium.reg_sanitario %></td>
-        <td><%= link_to 'Show', farmacium %></td>
-        <td><%= link_to 'Edit', edit_farmacium_path(farmacium) %></td>
-        <td><%= link_to 'Destroy', farmacium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to farmacium.nombre, farmacium, :class => 'h4' %></td>
+        <td><%= farmacium.rif %></td>
+        <td><%= farmacium.telefono %></td>
+        <td><%= truncate(strip_tags(farmacium.direccion), length: 100) %></td>
+        <td><a href="<%= farmacium.url %>"><%= farmacium.url %></a></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Farmacium', new_farmacium_path %>
+<!--<%= link_to 'New Farmacium', new_farmacium_path %>-->

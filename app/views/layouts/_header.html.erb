@@ -13,7 +13,35 @@
             <ul class="nav navbar-nav">
               <li><%= link_to " Inicio", index_path, :class=>'smoothScroll' %></li>
               <li> <a href="#about" class="smoothScroll"> Nuestra Institución</a></li>
-              <li> <a href="#services" class="smoothScroll"> Directorio</a></li>
+              <li class='dropdown dark user-menu'>
+                <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                  <span class='user-name hidden-phone'> Directorios</span>
+                  <b class='caret'></b>
+                </a>
+                <ul class='dropdown-menu'>
+                  <li>
+                      <%= link_to "Directorio Mèdico", medicos_path %>
+                  </li>
+                  <li class='divider'></li>
+                  <li>
+                    <%= link_to "Directorio de Centros de Salud", centro_saluds_path %>
+                  </li>
+                  <li class='divider'></li>
+                  <li>
+                    <%= link_to "Directorio de Aseguradoras", aseguradoras_path %>
+                  </li>
+                  <li class='divider'></li>
+
+                  <li>
+                    <%= link_to "Directorio de Farmacias", farmacia_path %>
+                  </li>
+                  <li class='divider'></li>
+                  <li>
+                    <%= link_to "Directorio de Centros de Examenes", centro_examenes_path %>
+                  </li>
+                </ul>
+              </li>
+
               <li> <a href="#team" class="smoothScroll"> Promociones</a></li>
               <li> <a href="#portfolio" class="smoothScroll"> Actualidad</a></li>
               <li> <a href="#blog" class="smoothScroll"> Contacto</a></li>
@@ -36,12 +64,20 @@
                       </a>
                       <ul class='dropdown-menu'>
                         <li>
-                            <i class='icon-user'></i>
+                            <i class='icon-user'>
                             <%= link_to "Perfil", usuario_perfil_path %>
+                            </i>
                         </li>
+                        <li class='divider'></li>
                         <li>
                             <i class='icon-cog'></i>
                             Settings
+                        </li>
+                        <li class='divider'></li>
+                        <li>
+                           <i class="icon-signup">
+                            <%= link_to "Añadir Especialidad", new_especialidad_path %>
+                           </i>
                         </li>
                         <li class='divider'></li>
                         <li>

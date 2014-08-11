@@ -48,6 +48,10 @@
       <%= f.date_select :fecha_nacimiento %>
     </div>
   <div class="field">
+    <%= f.label :especialidad %><br>
+    <%= f.collection_select :especialidad_id, Especialidad.all, :id, :nombre, :prompt => "Seleccione su especialidad mèdica" %>
+  </div>
+  <div class="field">
     <%= f.label :cmv %><br>
     <%= f.text_field :cmv %>
   </div>

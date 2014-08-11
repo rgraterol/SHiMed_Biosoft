@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   resources :usuarios
 
+  resources :especialidads
+
   root 'static#index', as: 'index'
 
   #Statics

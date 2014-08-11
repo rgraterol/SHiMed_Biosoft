@@ -1,23 +1,26 @@
-<h1>Listing centro_examenes</h1>
+<h1>Directorio de Centros de Exámenes Médicos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<table class="table table-striped table-bordered table-condensed">
   <tbody>
-    <% @centros_examenes.each do |centro_examene| %>
+  <tr>
+    <td><b>Nombre de Centro</b></td>
+    <td><b>RIF</b></td>
+    <td><b>Telefono</b></td>
+    <td><b>Dirección</b></td>
+    <td><b>Página Web</b></td>
+  </tr>
+  <% @centros_examenes.each do |centro_examenes| %>
       <tr>
-        <td><%= link_to 'Show', centro_examene %></td>
-        <td><%= link_to 'Edit', edit_centro_examene_path(centro_examene) %></td>
-        <td><%= link_to 'Destroy', centro_examene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to centro_examenes.nombre, centro_examenes, :class => 'h4' %></td>
+        <td><%= centro_examenes.rif %></td>
+        <td><%= centro_examenes.telefono %></td>
+        <td><%= truncate(strip_tags(centro_examenes.direccion), length: 100) %></td>
+        <td><a href="<%= centro_examenes.url %>"><%= centro_examenes.url %></a></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Centro examene', new_centro_examene_path %>
+<!--<%= link_to 'New Centro examene', new_centro_examene_path %>-->

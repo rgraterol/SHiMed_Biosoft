@@ -1,25 +1,26 @@
-<h1>Listing aseguradoras</h1>
+<h1>Directorio de Aseguradoras</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Registro go</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<table class="table table-striped table-bordered table-condensed">
   <tbody>
-    <% @aseguradoras.each do |aseguradora| %>
+  <tr>
+    <td><b>Nombre Empresa Aseguradora</b></td>
+    <td><b>RIF</b></td>
+    <td><b>Telefono</b></td>
+    <td><b>Dirección</b></td>
+    <td><b>Página Web</b></td>
+  </tr>
+  <% @aseguradoras.each do |aseguradora| %>
       <tr>
-        <td><%= aseguradora.registro_go %></td>
-        <td><%= link_to 'Show', aseguradora %></td>
-        <td><%= link_to 'Edit', edit_aseguradora_path(aseguradora) %></td>
-        <td><%= link_to 'Destroy', aseguradora, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to aseguradora.nombre, aseguradora, :class => 'h4' %></td>
+        <td><%= aseguradora.rif %></td>
+        <td><%= aseguradora.telefono %></td>
+        <td><%= truncate(strip_tags(aseguradora.direccion), length: 100) %></td>
+        <td><a href="<%= aseguradora.url %>"><%= aseguradora.url %></a></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Aseguradora', new_aseguradora_path %>
+<!--<%= link_to 'New Aseguradora', new_aseguradora_path %>-->

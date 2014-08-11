@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 20140807132622) do
     t.string   "cmv"
     t.text     "cv"
     t.string   "url"
+    t.string   "especialidad_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

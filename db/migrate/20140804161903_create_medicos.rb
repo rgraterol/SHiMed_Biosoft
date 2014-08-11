@@ -4,6 +4,7 @@ class CreateMedicos < ActiveRecord::Migration
       t.string :cmv
       t.text :cv
       t.string :url
+      t.string :especialidad_id
 
       t.timestamps
     end
